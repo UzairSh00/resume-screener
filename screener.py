@@ -1,6 +1,7 @@
+import os
 from groq import Groq
 
-client = Groq(api_key="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")
+client = Groq(api_key=os.environ.get("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"))
 
 def analyze_resume(resume_text: str, job_description: str) -> dict:
     prompt = f"""
